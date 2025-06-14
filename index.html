@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Denis Kiplangat | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --accent: #38bdf8;
+            --bg: #f3f4f6;
+            --card-bg: #fff;
+            --shadow: 0 4px 24px rgba(30,58,138,0.09);
+        }
+        body {
+            margin: 0;
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            background: var(--bg);
+            color: #222;
+        }
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            border-radius: 0 0 12px 12px;
+            margin-bottom: 2rem;
+        }
+        nav a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1rem 1.5rem;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 2rem 0 1.5rem 0;
+            gap: 2rem;
+        }
+        .hero-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            background: #e0e7ef;
+        }
+        .hero-text {
+            flex: 1;
+            min-width: 220px;
+        }
+        .hero-text h1 {
+            margin: 0 0 0.5rem 0;
+            color: var(--primary);
+            font-size: 2.4rem;
+        }
+        .hero-text h2 {
+            margin: 0 0 1rem 0;
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .section {
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .resume-list, .skills-list, .certs-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .resume-list li {
+            margin-bottom: 0.7rem;
+        }
+        .skills-list li, .certs-list li {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            margin: 0.2rem 0.5rem 0.2rem 0;
+            padding: 0.3rem 0.9rem;
+            border-radius: 16px;
+            font-size: 0.97rem;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: #f9fafb;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(30,58,138,0.06);
+            padding: 1.2rem 1rem 1.2rem 1.2rem;
+            transition: transform 0.15s;
+        }
+        .card:hover {
+            transform: translateY(-4px) scale(1.025);
+            box-shadow: 0 6px 20px rgba(30,58,138,0.12);
+        }
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 7px;
+            margin: 0.7rem 0;
+        }
+        .contact-links a {
+            display: inline-block;
+            margin-right: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-links a:hover {
+            color: var(--accent);
+        }
+        .contact-links span {
+            display: inline-block;
+            margin-right: 1.5rem;
+            color: #444;
+        }
+        @media (max-width: 600px) {
+            .hero { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+            .section { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#resume">Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#labs">Lab Challenges</a>
+        <a href="#contacts">Contact</a>
+    </nav>
+    <div class="container">
+        <!-- Home -->
+        <section class="hero" id="home">
+            <img src="profile.jpg" alt="Denis Kiplangat" class="hero-img">
+            <div class="hero-text">
+                <h1>Denis Kiplangat</h1>
+                <h2>IT Professional | Cloud & Cybersecurity Enthusiast</h2>
+                <p>
+                    Enthusiastic and results-oriented IT professional with a solid background in information technology and cloud computing. Experienced in technical support, troubleshooting, and implementing cybersecurity measures. Adept at collaborating with teams to enhance operational efficiency and ensure smooth IT operations.
+                </p>
+            </div>
+        </section>
+
+        <!-- Resume -->
+        <section class="section" id="resume">
+            <h2>Resume Overview</h2>
+            <h3>Work Experience</h3>
+            <ul class="resume-list">
+                <li>
+                    <strong>Kenya Revenue Authority</strong> <br>
+                    <em>Jan 2025 – Present</em><br>
+                    - Analyzing application performance to identify security incidents and vulnerabilities, enhancing overall security posture.<br>
+                    - Developing custom scripts to improve operational reliability and incident response times.<br>
+                    - Collaborating with cross-functional teams to develop specifications for secure applications, integrating security best practices from the outset.
+                </li>
+                <li>
+                    <strong>Intern – Presidential Digitalent, ICT Authority</strong><br>
+                    <em>Dec 2022 – Nov 2024</em><br>
+                    - Provided technical support by troubleshooting hardware and software issues, ensuring smooth operation of computer systems.<br>
+                    - Analyzed application performance to identify security incidents and vulnerabilities.<br>
+                    - Developed custom scripts to improve operational reliability and incident response times.<br>
+                    - Collaborated with cross-functional teams to develop specifications for secure applications.
+                </li>
+            </ul>
+            <h3>Education</h3>
+            <ul class="resume-list">
+                <li>
+                    <strong>Bachelor of Science in Software Development</strong> <br>
+                    KCA University, Sept 2018 – Dec 2022
+                </li>
+            </ul>
+            <h3>Technical Skills</h3>
+            <ul class="skills-list">
+                <li>Windows</li>
+                <li>MacOS</li>
+                <li>Linux</li>
+                <li>TCP/IP</li>
+                <li>DNS</li>
+                <li>DHCP</li>
+                <li>Python</li>
+                <li>MySQL</li>
+                <li>Microsoft Office</li>
+                <li>Google Workspace</li>
+                <li>Software Installation</li>
+                <li>Development Tools</li>
+            </ul>
+            <h3>Soft Skills</h3>
+            <ul class="skills-list">
+                <li>Problem Solving</li>
+                <li>Communication</li>
+                <li>Attention to Detail</li>
+                <li>Teamwork</li>
+            </ul>
+            <h3>Certifications</h3>
+            <ul class="certs-list">
+                <li>AWS Certified Cloud Practitioner</li>
+                <li>ISC2 Certificate in Cybersecurity</li>
+                <li>Data Analytics (Coursera)</li>
+                <li>Project Management (Coursera)</li>
+                <li>CCNA (Cisco Networking Academy)</li>
+            </ul>
+        </section>
+
+        <!-- Projects -->
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>SC-200 Microsoft Security Operations Analyst Labs</h3>
+                    <p>
+                        <strong>Description:</strong> Completed hands-on labs as part of the SC-200 course, focusing on threat detection, incident response, and using Microsoft Sentinel.<br>
+                        <strong>Key Activities:</strong>
+                        <ul>
+                            <li>Configured and managed Microsoft Sentinel workspaces</li>
+                            <li>Created analytics rules and hunting queries</li>
+                            <li>Investigated simulated security incidents</li>
+                        </ul>
+                        <strong>Outcome:</strong> Developed practical skills in security operations and cloud-based SIEM tools.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>AWS Cloud Practitioner Hands-on Labs</h3>
+                    <p>
+                        <strong>Description:</strong> Completed practical AWS Cloud Practitioner labs, gaining hands-on experience with core AWS services and cloud concepts.<br>
+                        <strong>Key Activities:</strong>
+                        <ul>
+                            <li>Built and configured a Virtual Private Cloud (VPC) with Amazon RDS and EC2</li>
+                            <li>Implemented data encryption using AWS Key Management Service (KMS)</li>
+                            <li>Explored AWS Identity and Access Management (IAM) for secure access control</li>
+                        </ul>
+                        <strong>Outcome:</strong> Gained real-world experience in deploying, securing, and managing AWS cloud resources in a sandbox environment.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Custom Script Automation for Incident Response</h3>
+                    <p>
+                        <strong>Description:</strong> Developed Python scripts to automate detection and response to security incidents.<br>
+                        <strong>Impact:</strong> Reduced response times and improved reliability for the Kenya Revenue Authority's IT operations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lab Challenges -->
+        <section class="section" id="labs">
+            <h2>Lab Challenges</h2>
+            <div class="card-grid">
+                <!-- Microsoft Sentinel Threat Detection Lab -->
+                <div class="card">
+                    <h3>Threat Detection & Incident Response with Microsoft Sentinel</h3>
+                    <p>
+                        <strong>Problem Statement:</strong><br>
+                        Detect, investigate, and respond to suspicious activities in a simulated enterprise cloud environment using Microsoft Sentinel.<br><br>
+                        <strong>Approach:</strong><br>
+                        - Deployed Microsoft Sentinel and connected data sources including Azure AD, Office 365, and custom logs.<br>
+                        - Configured analytics rules to automatically detect brute-force attacks, impossible travel, and privilege escalation.<br>
+                        - Used Kusto Query Language (KQL) to create custom hunting queries for advanced threat detection.<br>
+                        - Investigated generated incidents, analyzed entity behavior, and documented findings.<br>
+                        - Automated response actions using playbooks (Logic Apps) to isolate compromised accounts.<br><br>
+                        <strong>Tools Used:</strong> Microsoft Sentinel, Azure Portal, KQL, Logic Apps<br>
+                        <strong>Screenshots:</strong><br>
+                        <img src="sentinel-alerts.png" alt="Sentinel Alerts" width="100%">
+                        <img src="kql-query.png" alt="KQL Query Example" width="100%"><br>
+                        <strong>Key Lessons Learned:</strong><br>
+                        - Mastered SIEM concepts and cloud-native security monitoring.<br>
+                        - Developed proficiency in writing KQL queries and automating incident response.<br>
+                        - Gained experience in real-world threat investigation and reporting.<br>
+                    </p>
+                </div>
+                <!-- AWS VPC and IAM Lab -->
+                <div class="card">
+                    <h3>Securing Cloud Infrastructure with AWS VPC & IAM</h3>
+                    <p>
+                        <strong>Problem Statement:</strong><br>
+                        Deploy a secure, scalable cloud environment using AWS, ensuring strong access controls and network segmentation.<br><br>
+                        <strong>Approach:</strong><br>
+                        - Designed and launched a Virtual Private Cloud (VPC) with public and private subnets across multiple Availability Zones.<br>
+                        - Deployed EC2 instances in private subnets, configured security groups, and set up a bastion host for secure SSH access.<br>
+                        - Set up Amazon RDS (MySQL) in a private subnet, enabled encryption at rest and in transit.<br>
+                        - Implemented IAM roles and policies for least-privilege access, created user groups, and enforced MFA.<br>
+                        - Used AWS CloudWatch for monitoring and configured CloudTrail for auditing API activity.<br><br>
+                        <strong>Tools Used:</strong> AWS Management Console, IAM, VPC, EC2, RDS, CloudWatch, CloudTrail<br>
+                        <strong>Screenshots:</strong><br>
+                        <img src="aws-vpc-diagram.png" alt="AWS VPC Diagram" width="100%">
+                        <img src="iam-policy.png" alt="IAM Policy Example" width="100%"><br>
+                        <strong>Key Lessons Learned:</strong><br>
+                        - Gained hands-on experience in AWS networking, security best practices, and resource management.<br>
+                        - Learned how to enforce access control and audit cloud environments.<br>
+                        - Developed the ability to deploy production-grade, secure cloud solutions.<br>
+                    </p>
+                </div>
+                <!-- Linux Privilege Escalation Lab -->
+                <div class="card">
+                    <h3>Linux Privilege Escalation</h3>
+                    <p>
+                        <strong>Problem Statement:</strong><br>
+                        Escalate privileges from a standard user to root on a misconfigured Linux system.<br><br>
+                        <strong>Approach:</strong><br>
+                        - Enumerated the system using LinPEAS and manual inspection of SUID/SGID binaries.<br>
+                        - Discovered a vulnerable script with improper permissions.<br>
+                        - Crafted a custom exploit to gain root access.<br>
+                        - Documented the vulnerability and recommended remediation steps.<br><br>
+                        <strong>Tools Used:</strong> LinPEAS, bash, sudo, manual enumeration<br>
+                        <strong>Screenshots:</strong><br>
+                        <img src="linpeas-output.png" alt="LinPEAS Output" width="100%">
+                        <img src="root-access.png" alt="Root Access Proof" width="100%"><br>
+                        <strong>Key Lessons Learned:</strong><br>
+                        - Deepened understanding of Linux security and privilege escalation vectors.<br>
+                        - Enhanced skills in vulnerability assessment and exploitation.<br>
+                        - Improved ability to communicate findings and suggest remediations.<br>
+                    </p>
+                </div>
+                <!-- SQL Injection Lab -->
+                <div class="card">
+                    <h3>SQL Injection Exploitation</h3>
+                    <p>
+                        <strong>Problem Statement:</strong><br>
+                        Exploit a vulnerable login form to bypass authentication and extract sensitive data.<br><br>
+                        <strong>Approach:</strong><br>
+                        - Identified injectable parameters using Burp Suite.<br>
+                        - Crafted manual SQL injection payloads to bypass login.<br>
+                        - Automated data extraction using sqlmap.<br>
+                        - Reported findings and recommended secure coding practices.<br><br>
+                        <strong>Tools Used:</strong> Burp Suite, sqlmap, browser dev tools<br>
+                        <strong>Screenshots:</strong><br>
+                        <img src="burp-sql-injection.png" alt="Burp Suite SQLi" width="100%">
+                        <img src="sqlmap-results.png" alt="sqlmap Results" width="100%"><br>
+                        <strong>Key Lessons Learned:</strong><br>
+                        - Mastered the process of identifying and exploiting SQL injection vulnerabilities.<br>
+                        - Understood the importance of input validation and parameterized queries.<br>
+                        - Learned how to document and communicate security issues effectively.<br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section" id="contacts">
+            <h2>Contact</h2>
+            <div class="contact-links">
+                <a href="mailto:denskiplangat@gmail.com">Email</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <span>Tel: +254 727536 551</span>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
